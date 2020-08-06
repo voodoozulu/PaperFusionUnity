@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Stats/Health")]
-public class PlayerHealth : ScriptableObject
+[CreateAssetMenu(fileName = "New Health", menuName = "Stats/PlayerHealth")]
+public class SOPlayerHealth : ScriptableObject
 {
-    public int maxhealth;
     
     [SerializeField]
     private int _health;
