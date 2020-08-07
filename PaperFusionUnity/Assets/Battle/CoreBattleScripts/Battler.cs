@@ -4,8 +4,7 @@ using UnityEngine;
 
 public abstract class Battler : MonoBehaviour
 {
-    private player targetOptions;
-    public PlayerHealth health; 
+    public SOHealth health; 
     // Start is called before the first frame update
     void Start()
     {

@@ -393,7 +393,7 @@ MonoBehaviour:
     type: 3}
   cinnaprefab: {fileID: 4019866243818238386, guid: 10d908d475b229447aee810b13cd2b52,
     type: 3}
-  fuseprefab: {fileID: 4019866243818238386, guid: 10d908d475b229447aee810b13cd2b52,
+  fuseprefab: {fileID: 4019866243818238386, guid: 74006197d19c80047bf10f3f78c04ae5,
     type: 3}
 --- !u!4 &1848520969
 Transform:

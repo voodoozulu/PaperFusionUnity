@@ -35,8 +35,7 @@ public class BattleController : MonoBehaviour
     public void setupBattle(List<GameObject> enemies)
     {
         // create children in enemyBattleStation for every enemy in enemy list. (this functionality doesn't suppport bringing in extra enemies)
-        //Instantiate(enemy, childtransform)
-        //intantiate enemies in transform places?
+        //Instantiate enemy
         int i = 0;
         foreach (GameObject enemy in myEnemies)
         {
@@ -45,17 +44,16 @@ public class BattleController : MonoBehaviour
             enemyList[enemyList.Count - 1].transform.Translate(1*i,0,0);
             i++;
         }
+
+        //Instantiate Cinna and "fuse"
         cinna = Instantiate(cinnaprefab,playerBattleStation.transform);
         cinna.transform.Translate(0,0,0);
         cinna.name = "Cinna";
+        cinna.GetComponent<Player>().initialize();
         fuse = Instantiate(fuseprefab,playerBattleStation.transform);
         fuse.transform.Translate(-1,0,0);
         fuse.name = "Fuse";
-
-        // for (int i = 0; i < 2; i++)
-        // {
-        //     Instantiate(playerPrefab,  playerBattleStation.transform.right * -2 * i, Quaternion.identity,playerBattleStation.transform);
-        // }
+        fuse.GetComponent<Player>().initialize();
         
     }
 }

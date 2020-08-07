@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class Player : Battler
 {
     [SerializeField]
-    private PlayerHealth playerHealth;
+    private SOPlayerHealth playerHealth;
     public 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public override void initialize()
+    {
+        //any initialization goes in here
     }
 
     // Update is called once per frame

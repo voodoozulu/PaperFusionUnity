@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class enemy : Battler
+public abstract class Enemy : Battler
 {
     [SerializeField]
-    private EnemyHealth enemyHealth;
-    private Playertarget target;
+    private SOEnemyHealth enemyHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +16,10 @@ public abstract class enemy : Battler
     void Update()
     {
         
+    }
+    public override void initialize()
+    {
+        //any initialization goes in here
     }
 
 

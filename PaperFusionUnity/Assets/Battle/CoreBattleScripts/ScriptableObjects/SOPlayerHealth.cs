@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Health", menuName = "Stats/PlayerHealth")]
-public class SOPlayerHealth : ScriptableObject
+public class SOPlayerHealth : SOHealth
 {
     
     [SerializeField]
