@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Battler : MonoBehaviour
 {
-    public SOHealth health; 
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +23,17 @@ public abstract class Battler : MonoBehaviour
         Debug.Log(this.name + " is playing his turn");
     }
 
-    public void getTargets()//List<Battler>
+    public virtual void getTargets()//List<Battler>
     {
+        Debug.Log(this.name + "Is getting targets, This virtual function hasn't been overridden");
+    }
 
+    public virtual void takeDamage(Hit hit)
+    {
+        Debug.Log("Unchanged takeDamage Method");
+    }
+    public virtual void healDamage(Hit hit)
+    {
+        Debug.Log("Unchanged healDamage Method");
     }
 }

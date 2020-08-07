@@ -13,7 +13,7 @@ public class BattleController : MonoBehaviour
     private GameObject cinna;
     public GameObject fuseprefab;
     private GameObject fuse;
-    private List<GameObject> enemyList = new List<GameObject>();
+    private List<GameObject> enemyContainerList = new List<GameObject>();
 
     private List<GameObject> myEnemies = new List<GameObject>();
     // Start is called before the first frame update
@@ -39,10 +39,12 @@ public class BattleController : MonoBehaviour
         int i = 0;
         foreach (GameObject enemy in myEnemies)
         {
-
-            enemyList.Add(Instantiate(enemy, enemyBattleStation.transform));
-            enemyList[enemyList.Count - 1].transform.Translate(1*i,0,0);
+            
+            enemyContainerList.Add(Instantiate(enemy, enemyBattleStation.transform));
+            enemyContainerList[enemyContainerList.Count - 1].transform.Translate(1*i,0,0);
+            enemyContainerList[enemyContainerList.Count - 1].GetComponent<Enemy>().initialize();
             i++;
+            Debug.Log("this is the log " + i);
         }
 
         //Instantiate Cinna and "fuse"
@@ -50,11 +52,13 @@ public class BattleController : MonoBehaviour
         cinna.transform.Translate(0,0,0);
         cinna.name = "Cinna";
         cinna.GetComponent<Player>().initialize();
+
         fuse = Instantiate(fuseprefab,playerBattleStation.transform);
         fuse.transform.Translate(-1,0,0);
         fuse.name = "Fuse";
         fuse.GetComponent<Player>().initialize();
-        
     }
+
+
 }
 

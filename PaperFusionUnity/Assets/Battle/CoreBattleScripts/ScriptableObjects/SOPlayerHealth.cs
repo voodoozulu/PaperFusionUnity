@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Health", menuName = "Stats/PlayerHealth")]
-public class SOPlayerHealth : SOHealth
+public class SOPlayerHealth : ScriptableObject
 {
-    
+    public int maxHealth;
     [SerializeField]
     private int _health;
     public int health
@@ -13,9 +13,9 @@ public class SOPlayerHealth : SOHealth
         get{return _health;}
         set
         {
-            if (value > maxhealth)
+            if (value > maxHealth)
             {
-                _health = maxhealth;
+                _health = maxHealth;
             }
             else if (value < 0)
             {
@@ -31,8 +31,8 @@ public class SOPlayerHealth : SOHealth
     
     void Awake()
     {
-     maxhealth = 10;
-     health = maxhealth;
+     maxHealth = 10;
+     health = maxHealth;
     }
 }
 

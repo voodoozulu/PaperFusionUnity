@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Player : Battler
 {
-    [SerializeField]
-    private SOPlayerHealth playerHealth;
-    public 
+    public SOPlayerHealth sOPlayerHealth;
+    private int health{get => sOPlayerHealth.health; set => sOPlayerHealth.health = value;} 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +21,19 @@ public class Player : Battler
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
-            playerHealth.health--;
+            takeDamage(new Hit(damage:1));
         if(Input.GetMouseButtonDown(1))
-            playerHealth.health++;
+            healDamage(new Hit(heal:1));
+    }
+        public override void takeDamage(Hit hit)
+    {
+        health -= hit.damage;
+        //TODO add condition for dying
+    }
+
+        public override void healDamage(Hit hit)
+    {
+        health += hit.heal;
+        //TODO add condition for dying
     }
 }

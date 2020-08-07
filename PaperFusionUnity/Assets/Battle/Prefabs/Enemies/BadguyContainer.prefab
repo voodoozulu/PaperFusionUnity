@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4723937549461011325}
-  - component: {fileID: 4796477551594697854}
+  - component: {fileID: 5404887287610072278}
   m_Layer: 0
   m_Name: BadguyContainer
   m_TagString: Untagged
@@ -29,10 +29,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7880227784699869330}
+  - {fileID: 6719286196248256265}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4796477551594697854
+--- !u!114 &5404887287610072278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +42,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 380334077760838401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04773e98c46582b43b666e742dacd704, type: 3}
+  m_Script: {fileID: 11500000, guid: 229cfdb83d702cc428bfb35f117c29b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sOEnemyHealth: {fileID: 11400000, guid: 1869a7943d8e78541a6b78c64417342b, type: 2}
+  _health: 0
+--- !u!1 &1162720714216226237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6719286196248256265}
+  m_Layer: 0
+  m_Name: Melee Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6719286196248256265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162720714216226237}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4723937549461011325}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2485469012722446627
 GameObject:
   m_ObjectHideFlags: 0
