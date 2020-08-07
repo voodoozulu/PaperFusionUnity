@@ -36,14 +36,14 @@ public class BattleController : MonoBehaviour
     {
         // create children in enemyBattleStation for every enemy in enemy list. (this functionality doesn't suppport bringing in extra enemies)
         //Instantiate enemy
-        int i = 0;
+        float i = 0;
         foreach (GameObject enemy in myEnemies)
         {
             
             enemyContainerList.Add(Instantiate(enemy, enemyBattleStation.transform));
-            enemyContainerList[enemyContainerList.Count - 1].transform.Translate(1*i,0,0);
+            enemyContainerList[enemyContainerList.Count - 1].transform.Translate(i,0,i*0.25f-0.25f);
             enemyContainerList[enemyContainerList.Count - 1].GetComponent<Enemy>().initialize();
-            i++;
+            i=i+1;
             Debug.Log("this is the log " + i);
         }
 

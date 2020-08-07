@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
     public enum StatusConditions{NONE,STUNNED, SLEEP,POISONED}
-public class Hit : MonoBehaviour
+public class Hit
 {
     public int damage;
     public int heal;
