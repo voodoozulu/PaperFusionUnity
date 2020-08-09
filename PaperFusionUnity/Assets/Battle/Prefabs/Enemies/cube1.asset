@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b853d871dd2cb1142845f90a6855f5d2, type: 3}
   m_Name: cube1
   m_EditorClassIdentifier: 
-  maxhealth: 10
-  _health: 10
+  maxHealth: 3
