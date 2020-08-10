@@ -1,16 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Battler
 {
-    public SOEnemyHealth sOEnemyHealth;
-    [SerializeField]
-    public int maxHealth{get; private set;}
-    [SerializeField]
-    private int _health;
-    public int health
-    {
+    public SOEnemyHealth sOEnemyHealth; //sO convention is for Scriptable Objects
+    public int _health;//protected "backing field", TODO change abstract method to protected or find out how to get that working
+    public override int health
+    { 
         get{return _health;}
         set
         {
@@ -29,6 +27,7 @@ public class Enemy : Battler
         } 
 
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,28 +36,20 @@ public class Enemy : Battler
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {    //Code is just for testing taking damage. Deals damage on left click, heals on right click
+        if(Input.GetMouseButtonDown(0))
+        takeDamage(new Hit(damage:1));
+        if(Input.GetMouseButtonDown(1))
+        healDamage(new Hit(heal:1));
     }
-    public override void initialize()
+    public override void initialize(BattleController battleController)
     {
-        Debug.Log("badguy initialized");
         //any initialization goes in here
         maxHealth = sOEnemyHealth.maxHealth;
         health = maxHealth;
+        base.initialize(battleController);
     }
 
-    public override void takeDamage(Hit hit)
-    {
-        health -= hit.damage;
-        //TODO add condition for dying
-    }
-
-        public override void healDamage(Hit hit)
-    {
-        health += hit.heal;
-        //TODO add condition for dying
-    }
 
 
 

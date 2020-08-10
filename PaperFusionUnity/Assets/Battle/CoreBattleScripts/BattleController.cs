@@ -1,24 +1,39 @@
-﻿using System.Collections;
+﻿using System;
+using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public enum BattleState{START, PLAYERTURN, ENEMYTURN, WON, LOST}
+public enum TargetRequest{PLAYERLIST, ENEMYLIST, ALL}
 public class BattleController : MonoBehaviour
 {
+    /*
+    The BattleController directs the interactions between battlers. Battlers should not directly interact with one another to prevent 
+    dependancy issues. 
+    */
     public BattleState state;
-    public GameObject playerBattleStation;
+    public GameObject playerBattleStation; //Battlestations are just transforms to tell the controller where to put the battlers
     public GameObject enemyBattleStation;
+
     public GameObject enemyPrefab;
-    public GameObject cinnaprefab;
-    private GameObject cinna;
+
+    public GameObject cinnaprefab; //Prefab to be cloned
+    private GameObject cinna;      //the clone of the prefab
+    private Player cinnaBattler;   //The battler object associated with the parent game object (cleaner than gameObject.GetChildType<Battler>() any time you want to reference)
+
     public GameObject fuseprefab;
     private GameObject fuse;
-    private List<GameObject> enemyContainerList = new List<GameObject>();
+    private Player fuseBattler;
+    
+    private List<GameObject> playerContainerList = new List<GameObject>(); //list of player characters for targeting
+    private List<GameObject> enemyContainerList = new List<GameObject>(); //list of enemy characters for targeting and turn order
 
-    private List<GameObject> myEnemies = new List<GameObject>();
+    private List<GameObject> myEnemies = new List<GameObject>(); //Temp variable for cloning purposes
     // Start is called before the first frame update
     void Start()
-    {
+    { 
+        //setting up test enemies. in the future setupBattle should be called by the game master-script
         state = BattleState.START;
         myEnemies.Add(enemyPrefab);
         myEnemies.Add(enemyPrefab);
@@ -36,29 +51,72 @@ public class BattleController : MonoBehaviour
     {
         // create children in enemyBattleStation for every enemy in enemy list. (this functionality doesn't suppport bringing in extra enemies)
         //Instantiate enemy
-        int i = 0;
+        float i = 0;
         foreach (GameObject enemy in myEnemies)
         {
             
             enemyContainerList.Add(Instantiate(enemy, enemyBattleStation.transform));
-            enemyContainerList[enemyContainerList.Count - 1].transform.Translate(1*i,0,0);
-            enemyContainerList[enemyContainerList.Count - 1].GetComponent<Enemy>().initialize();
+            enemyContainerList[enemyContainerList.Count - 1].transform.Translate(i,0,i*0.25f-0.25f);
+            enemyContainerList[enemyContainerList.Count - 1].GetComponent<Enemy>().initialize(this);
             i++;
-            Debug.Log("this is the log " + i);
         }
 
         //Instantiate Cinna and "fuse"
-        cinna = Instantiate(cinnaprefab,playerBattleStation.transform);
+        cinna = Instantiate(cinnaprefab,playerBattleStation.transform); //Adds Cinna as a child of the Battlestation
         cinna.transform.Translate(0,0,0);
-        cinna.name = "Cinna";
-        cinna.GetComponent<Player>().initialize();
+        cinna.name = "Cinna";                                           //changes cinna's gameobject name to Cinna for clarity. Unnecessary for code
+        playerContainerList.Add(cinna);
+        cinnaBattler = cinna.GetComponent<Player>();
+        cinnaBattler.initialize(this);
 
         fuse = Instantiate(fuseprefab,playerBattleStation.transform);
         fuse.transform.Translate(-1,0,0);
         fuse.name = "Fuse";
-        fuse.GetComponent<Player>().initialize();
+        playerContainerList.Add(fuse);
+        fuseBattler = fuse.GetComponent<Player>();
+        fuseBattler.initialize(this);
+
+        state = BattleState.PLAYERTURN;
+        // mainPhase();
     }
 
+    private void mainPhase()
+    { //DO NOT CALL THIS, at the moment this causes a crash due to an infinite loop. 
+        // while(state != BattleState.WON && state != BattleState.LOST)
+        // {
+        //     playerTurn();
+        //     enemyTurn();
+        // }
+    }
 
+    private void playerTurn()
+    {//not yet implemented
+        state = BattleState.PLAYERTURN;
+        cinnaBattler.playTurn();
+    }
+
+    private void enemyTurn()
+    {//not yet implemented
+        state = BattleState.ENEMYTURN;
+        foreach (GameObject enemy in enemyContainerList)
+        {
+            enemy.GetComponent<Enemy>().playTurn();
+        }
+    }
+
+    public List<GameObject> getTargets(TargetRequest request)
+    {//returns targets based on skill request. 
+        switch(request)
+        {
+            case TargetRequest.PLAYERLIST: return playerContainerList;
+            case TargetRequest.ENEMYLIST: return enemyContainerList;
+            case TargetRequest.ALL: return playerContainerList.Concat(enemyContainerList).ToList();
+            default: return playerContainerList.Concat(enemyContainerList).ToList();
+        }
+    }
+
+    public void handleHealthDepleted(Battler target) => StartCoroutine(targetKilled(target));
+    public IEnumerator targetKilled(Battler target) { yield return new WaitForSeconds(1); Destroy(target.gameObject);} //destroys game object after it dies. 
+    //if we want resurection we should just disable and hide the game object instead. To prevent instantiating out of load-time
 }
 

@@ -5,21 +5,22 @@ using UnityEngine;
 public class Player : Battler
 {
     public SOPlayerHealth sOPlayerHealth;
-    private int health{get => sOPlayerHealth.health; set => sOPlayerHealth.health = value;} 
+
+    public override int health{get => sOPlayerHealth.health; set => sOPlayerHealth.health = value;} 
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    public override void initialize()
+    public override void initialize(BattleController battleController)
     {
-        //any initialization goes in here
+        base.initialize(battleController);
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { //deals damage or heals on mouse click for testing. See health changes in inspector
         if(Input.GetMouseButtonDown(0))
             takeDamage(new Hit(damage:1));
         if(Input.GetMouseButtonDown(1))
