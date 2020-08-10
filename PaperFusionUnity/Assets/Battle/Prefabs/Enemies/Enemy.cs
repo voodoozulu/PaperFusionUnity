@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Enemy : Battler
 {
-    public SOEnemyHealth sOEnemyHealth;
-    public int _health;
+    public SOEnemyHealth sOEnemyHealth; //sO convention is for Scriptable Objects
+    public int _health;//protected "backing field", TODO change abstract method to protected or find out how to get that working
     public override int health
     { 
         get{return _health;}
@@ -36,7 +36,7 @@ public class Enemy : Battler
 
     // Update is called once per frame
     void Update()
-    {    
+    {    //Code is just for testing taking damage. Deals damage on left click, heals on right click
         if(Input.GetMouseButtonDown(0))
         takeDamage(new Hit(damage:1));
         if(Input.GetMouseButtonDown(1))
@@ -44,7 +44,6 @@ public class Enemy : Battler
     }
     public override void initialize(BattleController battleController)
     {
-        Debug.Log("badguy initialized");
         //any initialization goes in here
         maxHealth = sOEnemyHealth.maxHealth;
         health = maxHealth;

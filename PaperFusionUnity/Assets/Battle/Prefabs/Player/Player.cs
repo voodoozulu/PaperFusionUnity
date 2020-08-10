@@ -20,7 +20,7 @@ public class Player : Battler
 
     // Update is called once per frame
     void Update()
-    {
+    { //deals damage or heals on mouse click for testing. See health changes in inspector
         if(Input.GetMouseButtonDown(0))
             takeDamage(new Hit(damage:1));
         if(Input.GetMouseButtonDown(1))

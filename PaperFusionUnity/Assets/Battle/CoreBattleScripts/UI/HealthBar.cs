@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class HealthBar : MonoBehaviour
     public Image foregroundImage;
     [SerializeField]
     private float updateSpeedSeconds = 0.4f;
+
     void Awake()
     {
         GetComponentInParent<Enemy>().OnHealthChanged += HandleHealthChanged;
@@ -26,12 +28,12 @@ public class HealthBar : MonoBehaviour
         float pct = (float)health/(float)maxHealth;
 
         while (elapsed < updateSpeedSeconds)
-        {
+        {//use to slowly change health bar. Change updateSpeedSeconds to make it faster or slower
             elapsed += Time.deltaTime;
             foregroundImage.fillAmount = Mathf.Lerp(preChangedPct, pct, elapsed / updateSpeedSeconds);
             yield return null;
         }
-        foregroundImage.fillAmount = pct;
+        foregroundImage.fillAmount = pct;    
     }
     void LateUpdate()
     {
