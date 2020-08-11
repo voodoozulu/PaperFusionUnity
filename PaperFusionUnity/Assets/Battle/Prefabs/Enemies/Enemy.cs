@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Battler
+public class EnemyBattler : Battler
 {
     public SOEnemyHealth sOEnemyHealth; //sO convention is for Scriptable Objects
     public int _health;//protected "backing field", TODO change abstract method to protected or find out how to get that working

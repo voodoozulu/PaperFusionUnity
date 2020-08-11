@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Battler
+public class PlayerBattler : Battler
 {
     public SOPlayerHealth sOPlayerHealth;
     public SOSkillsKnown skillsKnown;
