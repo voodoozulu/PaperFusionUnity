@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : Battler
 {
     public SOPlayerHealth sOPlayerHealth;
+    public SOSkillsKnown skillsKnown;
+    private List<GameObject> skills = new List<GameObject>();
 
     public override int health{get => sOPlayerHealth.health; set => sOPlayerHealth.health = value;} 
     // Start is called before the first frame update
@@ -16,6 +18,12 @@ public class Player : Battler
     public override void initialize(BattleController battleController)
     {
         base.initialize(battleController);
+
+        //populate known skills
+        foreach(GameObject skill in skillsKnown.skillsKnown)
+        {
+            skills.Add(Instantiate(skill, gameObject.transform));
+        }
     }
 
     // Update is called once per frame

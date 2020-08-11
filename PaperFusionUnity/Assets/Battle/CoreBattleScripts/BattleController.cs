@@ -13,6 +13,8 @@ public class BattleController : MonoBehaviour
     dependancy issues. 
     */
     public BattleState state;
+    [SerializeField]
+    private bool targeting = false;
     public GameObject playerBattleStation; //Battlestations are just transforms to tell the controller where to put the battlers
     public GameObject enemyBattleStation;
 
@@ -42,9 +44,47 @@ public class BattleController : MonoBehaviour
     }
 
     // Update is called once per frame
+    public Ray ray;
+    public RaycastHit hit;
+    public RaycastHit oldHit;
     void Update()
     {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(targeting == true && Physics.Raycast(ray.origin, ray.direction, out hit))
+        {
+            if(hit.collider.CompareTag("Battler"))
+            {
+                if(oldHit.collider != null)
+                {
+                    hideSelected(oldHit);
+                }
+                oldHit = hit;
+                showSelected(hit);
+            }
+        }
+        if(targeting == false && oldHit.collider!= null) hideSelected(oldHit);
+    }
+
+    IEnumerator targetingCoroutine()
+    {
+        while(targeting == true)
+        {
+            if(oldHit.collider != null){hideSelected(oldHit);}
+            if(Physics.Raycast(ray.origin, ray.direction, out hit) && hit.collider.CompareTag("Battler"))
+            {
+                
+            }
+            yield return null;
+        }
         
+    }
+    private void showSelected(RaycastHit hitt)//possibly depreciated
+    {
+        hitt.collider.gameObject.transform.parent.Find("Canvas").Find("targeting").gameObject.SetActive(true);
+    }
+    private void hideSelected(RaycastHit hitt)//Possibly depreciated
+    {
+        hitt.collider.gameObject.transform.parent.Find("Canvas").Find("targeting").gameObject.SetActive(false);
     }
 
     public void setupBattle(List<GameObject> enemies)
