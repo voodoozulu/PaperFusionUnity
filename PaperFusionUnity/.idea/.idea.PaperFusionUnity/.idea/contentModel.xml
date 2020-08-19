@@ -10,7 +10,9 @@
           <e p="CoreBattleScripts" t="Include">
             <e p="BattleController.cs" t="Include" />
             <e p="Battler.cs" t="Include" />
+            <e p="EnemyBattler.cs" t="Include" />
             <e p="Hit.cs" t="Include" />
+            <e p="PlayerBattler.cs" t="Include" />
             <e p="ScriptableObjects" t="Include">
               <e p="SOEnemyHealth.cs" t="Include" />
               <e p="SOPlayerHealth.cs" t="Include" />
@@ -18,14 +20,6 @@
             <e p="UI" t="Include">
               <e p="AlwaysOnTop.shader" t="Include" />
               <e p="HealthBar.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Prefabs" t="Include">
-            <e p="Enemies" t="Include">
-              <e p="EnemyBattler.cs" t="Include" />
-            </e>
-            <e p="Player" t="Include">
-              <e p="PlayerBattler.cs" t="Include" />
             </e>
           </e>
           <e p="Skills" t="Include">

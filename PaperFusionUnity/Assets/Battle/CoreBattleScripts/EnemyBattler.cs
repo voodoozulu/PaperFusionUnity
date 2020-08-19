@@ -49,8 +49,4 @@ public class EnemyBattler : Battler
         health = maxHealth;
         base.initialize(battleController);
     }
-
-
-
-
 }
