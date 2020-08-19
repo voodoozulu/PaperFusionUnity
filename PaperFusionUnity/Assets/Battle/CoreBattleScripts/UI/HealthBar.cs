@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
 
     void Awake()
     {
-        GetComponentInParent<Enemy>().OnHealthChanged += HandleHealthChanged;
+        GetComponentInParent<EnemyBattler>().OnHealthChanged += HandleHealthChanged;
     }
 
     private void HandleHealthChanged(int health, int maxHealth)

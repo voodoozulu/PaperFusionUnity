@@ -22,11 +22,11 @@ public class BattleController : MonoBehaviour
 
     public GameObject cinnaprefab; //Prefab to be cloned
     private GameObject cinna;      //the clone of the prefab
-    private Player cinnaBattler;   //The battler object associated with the parent game object (cleaner than gameObject.GetChildType<Battler>() any time you want to reference)
+    private PlayerBattler cinnaBattler;   //The battler object associated with the parent game object (cleaner than gameObject.GetChildType<Battler>() any time you want to reference)
 
     public GameObject fuseprefab;
-    private GameObject fuse;
-    private Player fuseBattler;
+    private GameObject jumble;
+    private PlayerBattler fuseBattler;
     
     private List<GameObject> playerContainerList = new List<GameObject>(); //list of player characters for targeting
     private List<GameObject> enemyContainerList = new List<GameObject>(); //list of enemy characters for targeting and turn order
@@ -97,7 +97,7 @@ public class BattleController : MonoBehaviour
             
             enemyContainerList.Add(Instantiate(enemy, enemyBattleStation.transform));
             enemyContainerList[enemyContainerList.Count - 1].transform.Translate(i,0,i*0.25f-0.25f);
-            enemyContainerList[enemyContainerList.Count - 1].GetComponent<Enemy>().initialize(this);
+            enemyContainerList[enemyContainerList.Count - 1].GetComponent<EnemyBattler>().initialize(this);
             i++;
         }
 
@@ -106,14 +106,14 @@ public class BattleController : MonoBehaviour
         cinna.transform.Translate(0,0,0);
         cinna.name = "Cinna";                                           //changes cinna's gameobject name to Cinna for clarity. Unnecessary for code
         playerContainerList.Add(cinna);
-        cinnaBattler = cinna.GetComponent<Player>();
+        cinnaBattler = cinna.GetComponent<PlayerBattler>();
         cinnaBattler.initialize(this);
 
-        fuse = Instantiate(fuseprefab,playerBattleStation.transform);
-        fuse.transform.Translate(-1,0,0);
-        fuse.name = "Fuse";
-        playerContainerList.Add(fuse);
-        fuseBattler = fuse.GetComponent<Player>();
+        jumble = Instantiate(fuseprefab,playerBattleStation.transform);
+        jumble.transform.Translate(-1,0,0);
+        jumble.name = "Jumble";
+        playerContainerList.Add(jumble);
+        fuseBattler = jumble.GetComponent<PlayerBattler>();
         fuseBattler.initialize(this);
 
         state = BattleState.PLAYERTURN;
@@ -140,7 +140,7 @@ public class BattleController : MonoBehaviour
         state = BattleState.ENEMYTURN;
         foreach (GameObject enemy in enemyContainerList)
         {
-            enemy.GetComponent<Enemy>().playTurn();
+            enemy.GetComponent<EnemyBattler>().playTurn();
         }
     }
 

@@ -37,8 +37,8 @@ public class PlayerBattler : Battler
         public override void takeDamage(Hit hit)
     {
         health -= hit.damage;
-        //TODO add condition for dying
-    }
+        
+    }//TODO add condition for dying
 
         public override void healDamage(Hit hit)
     {
