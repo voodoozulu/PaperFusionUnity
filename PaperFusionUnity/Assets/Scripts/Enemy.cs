@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float MobDistanceRun = 4.0f;
     private Animator animator;
     private Vector3 change;
+    [SerializeField] public List<Battler> enemiesToSpawn;
+    public MapController map;
 
     // Start is called before the first frame update
     void Start()
@@ -22,23 +24,28 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, Player.transform.position);
-        change = Vector3.zero;
-        change.x = Input.GetAxis("Horizontal");
-        change.z = Input.GetAxis("Vertical");
 
         //run towards player
         if (distance < MobDistanceRun)
         {
-            Vector3 dirToPlayer = transform.position - Player.transform.position;
-            Vector3 newPos = transform.position - dirToPlayer;
+            Vector3 dirToPlayer = Player.transform.position - transform.position;
+            Vector3 newPos = transform.position + dirToPlayer;
             Mob.SetDestination(newPos);
-            animator.SetFloat("MoveX", change.x);
-            animator.SetFloat("MoveZ", change.z);
+            animator.SetFloat("MoveX", dirToPlayer.x);
+            animator.SetFloat("MoveZ", dirToPlayer.z);
             animator.SetBool("Moving", true);
         }
         else
         {
             animator.SetBool("Moving", false);
+            Mob.SetDestination(transform.position);
         }
+        Mob.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+
+    void OnCollisionEnter(Collision collision)
+    {
+        map.BattleStart(enemiesToSpawn, "Normal Battle");
     }
 }

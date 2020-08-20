@@ -29,17 +29,21 @@ public class BattleController : MonoBehaviour
     private PlayerBattler fuseBattler;
     
     private List<GameObject> playerContainerList = new List<GameObject>(); //list of player characters for targeting
-    private List<GameObject> enemyContainerList = new List<GameObject>(); //list of enemy characters for targeting and turn order
+    private List<Battler> enemyContainerList = new List<Battler>(); //list of enemy characters for targeting and turn order
 
-    private List<GameObject> myEnemies = new List<GameObject>(); //Temp variable for cloning purposes
+    private List<Battler> myEnemies = new List<Battler>(); //Temp variable for cloning purposes
     // Start is called before the first frame update
     void Start()
     { 
         //setting up test enemies. in the future setupBattle should be called by the game master-script
         state = BattleState.START;
-        myEnemies.Add(enemyPrefab);
-        myEnemies.Add(enemyPrefab);
-        myEnemies.Add(enemyPrefab);
+        //myEnemies.Add(enemyPrefab);
+        //myEnemies.Add(enemyPrefab);
+        //myEnemies.Add(enemyPrefab);
+        foreach (Battler enemy in GlobalControl.Instance.enemiesToFight)
+        {
+            myEnemies.Add(enemy);
+        }
         setupBattle(myEnemies); 
     }
 
@@ -87,12 +91,12 @@ public class BattleController : MonoBehaviour
         hitt.collider.gameObject.transform.parent.Find("Canvas").Find("targeting").gameObject.SetActive(false);
     }
 
-    public void setupBattle(List<GameObject> enemies)
+    public void setupBattle(List<Battler> enemies)
     {
         // create children in enemyBattleStation for every enemy in enemy list. (this functionality doesn't suppport bringing in extra enemies)
         //Instantiate enemy
         float i = 0;
-        foreach (GameObject enemy in myEnemies)
+        foreach (Battler enemy in myEnemies)
         {
             
             enemyContainerList.Add(Instantiate(enemy, enemyBattleStation.transform));
@@ -138,13 +142,13 @@ public class BattleController : MonoBehaviour
     private void enemyTurn()
     {//not yet implemented
         state = BattleState.ENEMYTURN;
-        foreach (GameObject enemy in enemyContainerList)
+        foreach (Battler enemy in enemyContainerList)
         {
             enemy.GetComponent<EnemyBattler>().playTurn();
         }
     }
 
-    public List<GameObject> getTargets(TargetRequest request)
+    /*public List<GameObject> getTargets(TargetRequest request)
     {//returns targets based on skill request. 
         switch(request)
         {
@@ -153,7 +157,7 @@ public class BattleController : MonoBehaviour
             case TargetRequest.ALL: return playerContainerList.Concat(enemyContainerList).ToList();
             default: return playerContainerList.Concat(enemyContainerList).ToList();
         }
-    }
+    }*/
 
     public void handleHealthDepleted(Battler target) => StartCoroutine(targetKilled(target));
     public IEnumerator targetKilled(Battler target) { yield return new WaitForSeconds(1); Destroy(target.gameObject);} //destroys game object after it dies. 
