@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7422dbd-f0c6-4355-a40b-151017910016" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Enemies/BadguyContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/Prefabs/Enemies/BadguyContainer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Enemies/EnemyBattler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Enemies/EnemyBattler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/PlayerBattler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/PlayerBattler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/QTE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/Skills/QTE.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/HealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/Cinna.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/Cinna.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/SOSkillDamage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/SOSkillDamage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestBattle.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/a9/740cb67d/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Apps/UnityHub/2019.4.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/EnemyBattler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/9d/01ad0990/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/73/999e90e8/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/09/9ad2d03f/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -46,6 +53,12 @@
         <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/PlayerBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/EnemyBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/HealthBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/Skills/SOSkillDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/Skills/SOSkill.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs" />
       </list>
     </option>
   </component>
@@ -95,7 +108,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597868596635</updated>
-      <workItem from="1597868616690" duration="4340000" />
+      <workItem from="1597868616690" duration="7016000" />
+      <workItem from="1598794167532" duration="7033000" />
+      <workItem from="1598815811742" duration="6323000" />
     </task>
     <servers />
   </component>
@@ -114,14 +129,27 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1047" y="444" key="RiderGenerateDialog" timestamp="1598823187352">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1047" y="444" key="RiderGenerateDialog/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598823187352" />
     <state x="266" y="393" key="SettingsEditor" timestamp="1597868713005">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="266" y="393" key="SettingsEditor/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1597868713005" />
+    <state x="92" y="92" width="2376" height="1256" key="VCS.FileHistoryDialog" timestamp="1598810522861">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="92" y="92" width="2376" height="1256" key="VCS.FileHistoryDialog/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598810522861" />
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup" timestamp="1598826137643">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="943" y="325" width="672" height="678" key="search.everywhere.popup/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598826137643" />
   </component>
 </project>
