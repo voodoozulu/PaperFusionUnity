@@ -74,7 +74,6 @@ public class QuickTimeEvent : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("This is the start section");
         Coroutine endClock = StartCoroutine(totalCountDown());
     }
 
@@ -187,10 +186,8 @@ public class QuickTimeEvent : MonoBehaviour
     IEnumerator totalCountDown()
     {
         float elapsedTot = 0f;
-        Debug.Log("totalCD started");
         while (elapsedTot < totalTime)
         {
-            Debug.Log(elapsedTot.ToString());
             elapsedTot += Time.deltaTime;
             yield return null;
         }

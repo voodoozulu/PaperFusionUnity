@@ -22,11 +22,28 @@
     <list default="true" id="d7422dbd-f0c6-4355-a40b-151017910016" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/HealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/HealthBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/Cinna.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/Cinna.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/SOSkillDamage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/SOSkillDamage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestBattle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestBattle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/QuickTimeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/Skills/QuickTimeEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Button.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Combat Button.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Combat Button.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/potion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/potion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/run.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sling.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sling.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sword.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,17 +57,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/a9/740cb67d/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Apps/UnityHub/2019.4.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../Apps/UnityHub/2019.4.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/EnemyBattler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/9d/01ad0990/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/73/999e90e8/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/09/9ad2d03f/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Battle/Prefabs/Player/PlayerBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/EnemyBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/HealthBar.cs" />
@@ -59,6 +74,10 @@
         <option value="$PROJECT_DIR$/Assets/Battle/Skills/SOSkill.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs" />
         <option value="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/CombatUiButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/CombatUiButtonMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Battle/Skills/QuickTimeEvent.cs" />
       </list>
     </option>
   </component>
@@ -69,6 +88,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -81,6 +102,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../paperfusion build\PaperFusionUnity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Games\PaperFusion\paperfusion build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -111,6 +140,9 @@
       <workItem from="1597868616690" duration="7016000" />
       <workItem from="1598794167532" duration="7033000" />
       <workItem from="1598815811742" duration="6323000" />
+      <workItem from="1598872599519" duration="7210000" />
+      <workItem from="1598909486322" duration="6164000" />
+      <workItem from="1598958262948" duration="8372000" />
     </task>
     <servers />
   </component>
@@ -135,10 +167,74 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1047" y="444" key="RiderGenerateDialog" timestamp="1598823187352">
+    <state width="2517" height="534" key="GridCell.Tab.0.bottom" timestamp="1598925605228">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1047" y="444" key="RiderGenerateDialog/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598823187352" />
+    <state width="2517" height="534" key="GridCell.Tab.0.bottom/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.0.center" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.center/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.0.left" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.left/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.0.right" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.0.right/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.1.bottom" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.bottom/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.1.center" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.center/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.1.left" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.left/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.1.right" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.1.right/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.2.bottom" timestamp="1598925605229">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.bottom/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605229" />
+    <state width="2517" height="534" key="GridCell.Tab.2.center" timestamp="1598925605229">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.center/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605229" />
+    <state width="2517" height="534" key="GridCell.Tab.2.left" timestamp="1598925605228">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.left/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605228" />
+    <state width="2517" height="534" key="GridCell.Tab.2.right" timestamp="1598925605229">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.2.right/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605229" />
+    <state width="2517" height="534" key="GridCell.Tab.3.bottom" timestamp="1598925605230">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.bottom/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605230" />
+    <state width="2517" height="534" key="GridCell.Tab.3.center" timestamp="1598925605229">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.center/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605229" />
+    <state width="2517" height="534" key="GridCell.Tab.3.left" timestamp="1598925605229">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.left/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605229" />
+    <state width="2517" height="534" key="GridCell.Tab.3.right" timestamp="1598925605229">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="2517" height="534" key="GridCell.Tab.3.right/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598925605229" />
+    <state x="1047" y="444" key="RiderGenerateDialog" timestamp="1598960597303">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1047" y="444" key="RiderGenerateDialog/0.0.2560.1440/-1920.346.1920.1080@0.0.2560.1440" timestamp="1598960597303" />
     <state x="266" y="393" key="SettingsEditor" timestamp="1597868713005">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>

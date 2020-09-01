@@ -20,6 +20,7 @@
             </e>
             <e p="UI" t="Include">
               <e p="AlwaysOnTop.shader" t="Include" />
+              <e p="CombatUiButtonMovement.cs" t="Include" />
               <e p="HealthBar.cs" t="Include" />
             </e>
           </e>
@@ -79,12 +80,6 @@
         </e>
         <e p="Testing" t="Include">
           <e p="PlayerHealth.cs" t="Include" />
-        </e>
-        <e p="UI" t="Include">
-          <e p="Combat Ui" t="Include">
-            <e p="CombatUiButton.cs" t="Include" />
-            <e p="CombatUiButtonMovement.cs" t="Include" />
-          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
