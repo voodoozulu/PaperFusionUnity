@@ -823,6 +823,11 @@ PrefabInstance:
       propertyPath: map
       value: 
       objectReference: {fileID: 541985652}
+    - target: {fileID: 7502135921793348558, guid: a622559f445b27643baa866eee4fc6c8,
+        type: 3}
+      propertyPath: MobDistanceRun
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7502135921793348593, guid: a622559f445b27643baa866eee4fc6c8,
         type: 3}
       propertyPath: m_Name
