@@ -4132,8 +4132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1111049720}
   - component: {fileID: 1111049723}
-  - component: {fileID: 1111049722}
   - component: {fileID: 1111049721}
+  - component: {fileID: 1111049722}
   m_Layer: 5
   m_Name: ItemsPanel
   m_TagString: Untagged
@@ -4204,13 +4204,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bf5730b5315a53c41ae460d9af92cec2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fbf659cb648d50b4cbc9c84dc3db5066, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
