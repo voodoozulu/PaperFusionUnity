@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8450947127156786704}
   - component: {fileID: 1156277390860036470}
   m_Layer: 5
-  m_Name: ItemButton
+  m_Name: BadgeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 25}
+  m_SizeDelta: {x: 750, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &961278944055580936
 CanvasRenderer:
