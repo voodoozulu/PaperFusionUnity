@@ -33,7 +33,9 @@ public class HealthBar : MonoBehaviour
             foregroundImage.fillAmount = Mathf.Lerp(preChangedPct, pct, elapsed / updateSpeedSeconds);
             yield return null;
         }
-        foregroundImage.fillAmount = pct;    
+        foregroundImage.fillAmount = pct;
+        Quaternion rot = Quaternion.Euler(0f, 0f, 0f);
+        Quaternion rot2 = Quaternion.Euler(0f, 0f, 0f);
     }
     void LateUpdate()
     {

@@ -17,9 +17,10 @@ public class BattleController : MonoBehaviour
     private bool targeting = false;
     public GameObject playerBattleStation; //Battlestations are just transforms to tell the controller where to put the battlers
     public GameObject enemyBattleStation;
-
+    public Camera mainCamera;
+    public Canvas combatUiButtons;
     public GameObject enemyPrefab;
-
+    [Header("Player Objects")]
     public GameObject cinnaprefab; //Prefab to be cloned
     private GameObject cinna;      //the clone of the prefab
     private PlayerBattler cinnaBattler;   //The battler object associated with the parent game object (cleaner than gameObject.GetChildType<Battler>() any time you want to reference)
@@ -95,6 +96,8 @@ public class BattleController : MonoBehaviour
     {
         // create children in enemyBattleStation for every enemy in enemy list. (this functionality doesn't suppport bringing in extra enemies)
         //Instantiate enemy
+        combatUiButtons.transform.GetChild(0).gameObject.transform.position =
+            Camera.main.WorldToScreenPoint(playerBattleStation.transform.position);
         float i = 0;
         foreach (Battler enemy in myEnemies)
         {
