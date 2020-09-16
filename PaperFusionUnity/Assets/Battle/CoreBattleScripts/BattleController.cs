@@ -13,51 +13,98 @@ public class BattleController : MonoBehaviour
     dependancy issues. 
     */
     public BattleState state;
+    [SerializeField]
+    private bool targeting = false;
     public GameObject playerBattleStation; //Battlestations are just transforms to tell the controller where to put the battlers
     public GameObject enemyBattleStation;
-
+    public Camera mainCamera;
+    public Canvas combatUiButtons;
     public GameObject enemyPrefab;
-
+    [Header("Player Objects")]
     public GameObject cinnaprefab; //Prefab to be cloned
     private GameObject cinna;      //the clone of the prefab
-    private Player cinnaBattler;   //The battler object associated with the parent game object (cleaner than gameObject.GetChildType<Battler>() any time you want to reference)
+    private PlayerBattler cinnaBattler;   //The battler object associated with the parent game object (cleaner than gameObject.GetChildType<Battler>() any time you want to reference)
 
     public GameObject fuseprefab;
-    private GameObject fuse;
-    private Player fuseBattler;
+    private GameObject jumble;
+    private PlayerBattler fuseBattler;
     
     private List<GameObject> playerContainerList = new List<GameObject>(); //list of player characters for targeting
-    private List<GameObject> enemyContainerList = new List<GameObject>(); //list of enemy characters for targeting and turn order
+    private List<Battler> enemyContainerList = new List<Battler>(); //list of enemy characters for targeting and turn order
 
-    private List<GameObject> myEnemies = new List<GameObject>(); //Temp variable for cloning purposes
+    private List<Battler> myEnemies = new List<Battler>(); //Temp variable for cloning purposes
     // Start is called before the first frame update
     void Start()
     { 
         //setting up test enemies. in the future setupBattle should be called by the game master-script
         state = BattleState.START;
-        myEnemies.Add(enemyPrefab);
-        myEnemies.Add(enemyPrefab);
-        myEnemies.Add(enemyPrefab);
+        //myEnemies.Add(enemyPrefab);
+        //myEnemies.Add(enemyPrefab);
+        //myEnemies.Add(enemyPrefab);
+        foreach (Battler enemy in GlobalControl.Instance.enemiesToFight)
+        {
+            myEnemies.Add(enemy);
+        }
         setupBattle(myEnemies); 
     }
 
     // Update is called once per frame
+    public Ray ray;
+    public RaycastHit hit;
+    public RaycastHit oldHit;
     void Update()
     {
-        
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if(targeting == true && Physics.Raycast(ray.origin, ray.direction, out hit))
+        {
+            if(hit.collider.CompareTag("Battler"))
+            {
+                if(oldHit.collider != null)
+                {
+                    hideSelected(oldHit);
+                }
+                oldHit = hit;
+                showSelected(hit);
+            }
+        }
+        if(targeting == false && oldHit.collider!= null) hideSelected(oldHit);
     }
 
-    public void setupBattle(List<GameObject> enemies)
+    IEnumerator targetingCoroutine()
+    {
+        while(targeting == true)
+        {
+            if(oldHit.collider != null){hideSelected(oldHit);}
+            if(Physics.Raycast(ray.origin, ray.direction, out hit) && hit.collider.CompareTag("Battler"))
+            {
+                
+            }
+            yield return null;
+        }
+        
+    }
+    private void showSelected(RaycastHit hitt)//possibly depreciated
+    {
+        hitt.collider.gameObject.transform.parent.Find("Canvas").Find("targeting").gameObject.SetActive(true);
+    }
+    private void hideSelected(RaycastHit hitt)//Possibly depreciated
+    {
+        hitt.collider.gameObject.transform.parent.Find("Canvas").Find("targeting").gameObject.SetActive(false);
+    }
+
+    public void setupBattle(List<Battler> enemies)
     {
         // create children in enemyBattleStation for every enemy in enemy list. (this functionality doesn't suppport bringing in extra enemies)
         //Instantiate enemy
+        combatUiButtons.transform.GetChild(0).gameObject.transform.position =
+            Camera.main.WorldToScreenPoint(playerBattleStation.transform.position);
         float i = 0;
-        foreach (GameObject enemy in myEnemies)
+        foreach (Battler enemy in myEnemies)
         {
             
             enemyContainerList.Add(Instantiate(enemy, enemyBattleStation.transform));
             enemyContainerList[enemyContainerList.Count - 1].transform.Translate(i,0,i*0.25f-0.25f);
-            enemyContainerList[enemyContainerList.Count - 1].GetComponent<Enemy>().initialize(this);
+            enemyContainerList[enemyContainerList.Count - 1].GetComponent<EnemyBattler>().initialize(this);
             i++;
         }
 
@@ -66,14 +113,14 @@ public class BattleController : MonoBehaviour
         cinna.transform.Translate(0,0,0);
         cinna.name = "Cinna";                                           //changes cinna's gameobject name to Cinna for clarity. Unnecessary for code
         playerContainerList.Add(cinna);
-        cinnaBattler = cinna.GetComponent<Player>();
+        cinnaBattler = cinna.GetComponent<PlayerBattler>();
         cinnaBattler.initialize(this);
 
-        fuse = Instantiate(fuseprefab,playerBattleStation.transform);
-        fuse.transform.Translate(-1,0,0);
-        fuse.name = "Fuse";
-        playerContainerList.Add(fuse);
-        fuseBattler = fuse.GetComponent<Player>();
+        jumble = Instantiate(fuseprefab,playerBattleStation.transform);
+        jumble.transform.Translate(-1,0,0);
+        jumble.name = "Jumble";
+        playerContainerList.Add(jumble);
+        fuseBattler = jumble.GetComponent<PlayerBattler>();
         fuseBattler.initialize(this);
 
         state = BattleState.PLAYERTURN;
@@ -98,13 +145,13 @@ public class BattleController : MonoBehaviour
     private void enemyTurn()
     {//not yet implemented
         state = BattleState.ENEMYTURN;
-        foreach (GameObject enemy in enemyContainerList)
+        foreach (Battler enemy in enemyContainerList)
         {
-            enemy.GetComponent<Enemy>().playTurn();
+            enemy.GetComponent<EnemyBattler>().playTurn();
         }
     }
 
-    public List<GameObject> getTargets(TargetRequest request)
+    /*public List<GameObject> getTargets(TargetRequest request)
     {//returns targets based on skill request. 
         switch(request)
         {
@@ -113,7 +160,7 @@ public class BattleController : MonoBehaviour
             case TargetRequest.ALL: return playerContainerList.Concat(enemyContainerList).ToList();
             default: return playerContainerList.Concat(enemyContainerList).ToList();
         }
-    }
+    }*/
 
     public void handleHealthDepleted(Battler target) => StartCoroutine(targetKilled(target));
     public IEnumerator targetKilled(Battler target) { yield return new WaitForSeconds(1); Destroy(target.gameObject);} //destroys game object after it dies. 

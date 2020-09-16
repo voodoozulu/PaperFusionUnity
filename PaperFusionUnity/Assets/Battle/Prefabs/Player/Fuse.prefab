@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayable: 1
   sOPlayerHealth: {fileID: 11400000, guid: 0d6728cbdab90ee40b7520faed6fba35, type: 2}
+  skillsKnown: {fileID: 11400000, guid: 2101b1084a21a0340803c0b492cb26c0, type: 2}
 --- !u!1 &6294331718196006177
 GameObject:
   m_ObjectHideFlags: 0
