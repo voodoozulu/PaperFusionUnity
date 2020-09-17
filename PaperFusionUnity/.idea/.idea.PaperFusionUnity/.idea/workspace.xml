@@ -20,30 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7422dbd-f0c6-4355-a40b-151017910016" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/BattleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Battle/Skills/QuickTimeEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Battle/Skills/QuickTimeEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Combat Button.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/Combat Button.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUI.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUI.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/CombatUiButtonMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/potion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/potion.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/run.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/run.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sling.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sword.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Combat Ui/sword.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PaperFusionUnity/.idea/indexLayout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +31,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathFollower.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/a9/740cb67d/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Apps/UnityHub/2019.4.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Battle/Skills/SOSkill.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Apps/UnityHub/2019.4.5f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/EnemyBattler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/9d/01ad0990/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/73/999e90e8/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A979F18D-51AF-4117-9D12-B797E8C5BE14/09/9ad2d03f/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Battle/CoreBattleScripts/UI/CombatUiButtonMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -143,6 +122,7 @@
       <workItem from="1598872599519" duration="7210000" />
       <workItem from="1598909486322" duration="6164000" />
       <workItem from="1598958262948" duration="8372000" />
+      <workItem from="1600344939092" duration="134000" />
     </task>
     <servers />
   </component>
