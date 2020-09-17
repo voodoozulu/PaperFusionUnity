@@ -4,7 +4,6 @@
     <e p="C:\Users\Kirby\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Kirby\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_PaperFusionUnity.1149093926.00" t="ExcludeRecursive" />
     <e p="D:\Games\PaperFusion\PaperFusionUnity\PaperFusionUnity" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Battle" t="Include">
@@ -20,63 +19,23 @@
             </e>
             <e p="UI" t="Include">
               <e p="AlwaysOnTop.shader" t="Include" />
-              <e p="CombatUiButtonMovement.cs" t="Include" />
               <e p="HealthBar.cs" t="Include" />
             </e>
           </e>
           <e p="Skills" t="Include">
             <e p="QuickTimeEvent.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
-            <e p="SOSkill.cs" t="Include" />
+            <e p="SOSkillDamage.cs" t="Include" />
             <e p="SOSkillsKnown.cs" t="Include" />
-          </e>
-        </e>
-        <e p="PathCreator" t="Include">
-          <e p="Core" t="Include">
-            <e p="Editor" t="Include">
-              <e p="Helper" t="Include">
-                <e p="MouseUtility.cs" t="Include" />
-                <e p="PathHandle.cs" t="Include" />
-                <e p="ScreenSpacePolyLine.cs" t="Include" />
-              </e>
-              <e p="PathCreatorEditor.asmdef" t="Include" />
-              <e p="PathEditor.cs" t="Include" />
-            </e>
-            <e p="Runtime" t="Include">
-              <e p="Objects" t="Include">
-                <e p="BezierPath.cs" t="Include" />
-                <e p="EndOfPathInstruction.cs" t="Include" />
-                <e p="GlobalDisplaySettings.cs" t="Include" />
-                <e p="MinMax3D.cs" t="Include" />
-                <e p="PathCreator.cs" t="Include" />
-                <e p="PathCreatorData.cs" t="Include" />
-                <e p="PathSpace.cs" t="Include" />
-                <e p="VertexPath.cs" t="Include" />
-              </e>
-              <e p="PathCreator.asmdef" t="Include" />
-              <e p="Utility" t="Include">
-                <e p="CubicBezierUtility.cs" t="Include" />
-                <e p="MathUtility.cs" t="Include" />
-                <e p="VertexPathUtility.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="Examples" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="Editor" t="Include">
-                <e p="PathSceneToolEditor.cs" t="Include" />
-              </e>
-              <e p="GeneratePathExample.cs" t="Include" />
-              <e p="PathFollower.cs" t="Include" />
-              <e p="PathPlacer.cs" t="Include" />
-              <e p="PathSceneTool.cs" t="Include" />
-              <e p="PathSpawner.cs" t="Include" />
-              <e p="RoadMeshCreator.cs" t="Include" />
-            </e>
           </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="ChangeScene.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="FollowPlayer.cs" t="Include" />
+          <e p="GlobalControl.cs" t="Include" />
+          <e p="MapController.cs" t="Include" />
+          <e p="PlayerMovement.cs" t="Include" />
         </e>
         <e p="Testing" t="Include">
           <e p="PlayerHealth.cs" t="Include" />
@@ -85,8 +44,6 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="PaperFusionUnity.sln" t="IncludeFlat" />
-      <e p="PathCreator.csproj" t="IncludeRecursive" />
-      <e p="PathCreatorEditor.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
